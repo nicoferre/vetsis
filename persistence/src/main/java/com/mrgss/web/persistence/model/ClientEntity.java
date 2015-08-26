@@ -22,7 +22,7 @@ public class ClientEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column(name = "document", nullable = false, columnDefinition = "number")
+	@Column(name = "document", nullable = false)
 	private Long doc;
 
 	@ManyToOne
