@@ -9,25 +9,24 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mrgss.web.persistence.model.PersistentUser;
-import com.mrgss.web.persistence.repository.UsersRepository;
+import com.mrgss.web.persistence.model.RoleEntity;
+import com.mrgss.web.persistence.repository.RoleRepository;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 @ContextConfiguration("/spring-jpa-config.xml")
-public class PersistentUserRepositoryTest {
+public class RoleRepositoryTest {
 	
 	@Autowired
-	UsersRepository repository;
+	RoleRepository repository;
 	
 	@Test
-	public void insertsNewCustomerCorrectly() {
-		PersistentUser user = new PersistentUser();
-		user.setName("Manuel");
-		user.setPassword("322547");
-		user = repository.save(user);
-		assertNotNull(user.getId());
+	public void insertsNewRole() {
+		RoleEntity role = new RoleEntity();
+		role.setName("Administrador");
+		role = repository.save(role);
+		assertNotNull(role.getId());
 	}
 	
 }
