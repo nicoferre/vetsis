@@ -78,5 +78,4 @@ public class ClientRepositoryTest {
 		client = repositoryClient.save(client);
 		assertNotNull(client);
 	}
-	
 }
