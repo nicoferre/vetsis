@@ -27,6 +27,7 @@ public class BillEntity {
 	@OneToOne
 	private ClientEntity client;
 	
+	@OneToOne
 	private TypeOfBillsEntity typeOfBills;
 	
 	private Long total;

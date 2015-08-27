@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,23 +18,12 @@ public class RaceEntity {
 	@Column(nullable = false)
 	private String name;
 
-	@ManyToOne
-	private SpeciesEntity species;
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public SpeciesEntity getSpecies() {
-		return species;
-	}
-
-	public void setSpecies(SpeciesEntity species) {
-		this.species = species;
 	}
 
 	public Long getId() {
