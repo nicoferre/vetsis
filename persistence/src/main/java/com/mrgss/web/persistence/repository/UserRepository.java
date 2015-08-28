@@ -9,6 +9,8 @@ import com.mrgss.web.persistence.model.UserEntity;
 public interface UserRepository extends CrudRepository<UserEntity, Long> {
 
 	public UserEntity findByUsername(String name);
+	
+	public UserEntity findByUsernameAndPassword(String username, String password);
 }
 
 

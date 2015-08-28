@@ -15,28 +15,28 @@
 
 <div class="container">
   <div class="row">
-    <h1 class="text-center">Login Screen Using Bootstrap</h1>
+    <h1 class="text-center">Login</h1>
     <div class="login-wrap">
-      <form class="form-horizontal" role="form">
+      <form class="form-horizontal" role="form" action="login" method="POST">
         <div class="form-group">
           <label for="inputEmail3" class="col-sm-3 control-label">
-            UserName</label>
+            Nombre de usuario</label>
           <div class="col-sm-9">
-            <input type="email" class="form-control" id="inputUser" placeholder="UserName" required>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="UserName">
           </div>
         </div>
         <div class="form-group">
           <label for="inputPassword3" class="col-sm-3 control-label">
-            Password</label>
+            Clave</label>
           <div class="col-sm-9">
-            <input type="password" class="form-control" id="inputPsw" placeholder="Password" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-9">
             <div class="checkbox">
               <label>
-                <input type="checkbox" /> Remember me
+                <input type="checkbox" /> Recordarme
               </label>
             </div>
           </div>
@@ -44,9 +44,9 @@
         <div class="form-group last">
           <div class="col-sm-offset-3 col-sm-9">
             <button type="submit" class="btn btn-success btn-sm">
-              Sign in</button>
+              Ingresar</button>
             <button type="reset" class="btn btn-default btn-sm">
-              Reset</button>
+              Limpiar</button>
           </div>
         </div>
       </form>
