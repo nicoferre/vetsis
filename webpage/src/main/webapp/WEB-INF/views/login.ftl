@@ -1,5 +1,18 @@
-<#import "macros.ftl" as macros/>
-<@macros.load_css src="${renderRequest.getContextPath()}"/>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+
+<title>Vet-SIS | Sistema Integral de Gesti&oacute;n</title>
+
+</head>
+
+<body>
+
 <div class="container">
   <div class="row">
     <h1 class="text-center">Login Screen Using Bootstrap</h1>
@@ -41,4 +54,8 @@
   </div>
 </div>
 
-<@macros.load_js src="${renderRequest.getContextPath()}"/>
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
