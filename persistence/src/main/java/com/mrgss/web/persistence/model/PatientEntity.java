@@ -93,4 +93,12 @@ public class PatientEntity {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "PatientEntity [id=" + id + ", client=" + client + ", name="
+				+ name + ", startDate=" + startDate + ", race=" + race
+				+ ", birthday=" + birthday + ", deceasedDate=" + deceasedDate
+				+ "]";
+	}
 }

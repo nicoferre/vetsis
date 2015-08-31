@@ -29,4 +29,9 @@ public class RaceEntity {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "RaceEntity [id=" + id + ", name=" + name + "]";
+	}
 }

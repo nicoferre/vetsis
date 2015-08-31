@@ -137,4 +137,13 @@ public class ClientEntity {
 	public void setGender(Boolean gender) {
 		this.gender = gender;
 	}
+
+	@Override
+	public String toString() {
+		return "ClientEntity [id=" + id + ", doc=" + doc + ", docType="
+				+ docType + ", firstname=" + firstname + ", lastname="
+				+ lastname + ", mail=" + mail + ", phone=" + phone
+				+ ", startDate=" + startDate + ", gender=" + gender
+				+ ", patient=" + patient + ", user=" + user + "]";
+	}
 }

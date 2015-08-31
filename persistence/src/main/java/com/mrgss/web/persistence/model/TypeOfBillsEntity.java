@@ -30,4 +30,9 @@ public class TypeOfBillsEntity {
 		return id;
 	}
 
+	@Override
+	public String toString() {
+		return "TypeOfBillsEntity [id=" + id + ", type=" + type + "]";
+	}
+
 }

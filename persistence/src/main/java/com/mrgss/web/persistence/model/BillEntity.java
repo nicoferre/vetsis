@@ -67,4 +67,10 @@ public class BillEntity {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "BillEntity [id=" + id + ", date=" + date + ", client=" + client
+				+ ", typeOfBills=" + typeOfBills + ", total=" + total + "]";
+	}
 }

@@ -29,4 +29,10 @@ public class DocTypeEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "DocTypeEntity [id=" + id + ", name=" + name + "]";
+	}
+	
 }

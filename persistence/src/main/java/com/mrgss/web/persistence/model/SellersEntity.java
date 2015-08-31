@@ -56,4 +56,10 @@ public class SellersEntity {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "SellersEntity [id=" + id + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", startDate=" + startDate + "]";
+	}
 }

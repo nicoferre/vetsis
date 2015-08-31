@@ -61,4 +61,10 @@ public class SpeciesEntity {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "SpeciesEntity [id=" + id + ", name=" + name + ", startDate="
+				+ startDate + ", races=" + races + "]";
+	}
 }
