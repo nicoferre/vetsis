@@ -29,4 +29,9 @@ public class RoleEntity {
 	public Long getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "RoleEntity [id=" + id + ", name=" + name + "]";
+	}
 }

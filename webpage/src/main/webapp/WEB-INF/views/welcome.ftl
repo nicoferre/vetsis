@@ -1,1 +1,1 @@
-<p>Hello ${user.name}</p>
+<p>Welcome</p>

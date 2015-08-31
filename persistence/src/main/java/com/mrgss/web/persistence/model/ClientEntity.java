@@ -35,7 +35,7 @@ public class ClientEntity {
 	private String firstname;
 
 	@Column(nullable = false)
-	private String lastName;
+	private String lastname;
 
 	private String mail;
 
@@ -98,12 +98,12 @@ public class ClientEntity {
 		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getMail() {

@@ -60,7 +60,7 @@ public class PatientRepositoryTest {
 		
 		client = new ClientEntity();
 		client.setFirstname("Nico");
-		client.setLastName("Nicolas");
+		client.setLastname("Nicolas");
 		client.setDoc(34574565L);
 		client.setDocType(docType);
 		client.setGender(true);

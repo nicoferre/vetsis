@@ -16,7 +16,7 @@ public class UserEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@Column(nullable = false)
+	@Column(nullable = false, unique=true)
 	private String username;
 	
 	@Column(nullable = false)
@@ -61,5 +61,12 @@ public class UserEntity {
 
 	public Long getId() {
 		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "UserEntity [id=" + id + ", username=" + username
+				+ ", password=" + password + ", role=" + role + ", active="
+				+ active + "]";
 	}
 }

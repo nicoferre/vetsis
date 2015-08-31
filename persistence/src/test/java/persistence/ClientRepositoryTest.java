@@ -66,7 +66,7 @@ public class ClientRepositoryTest {
 	public void insertNewClient(){
 		ClientEntity client = new ClientEntity();
 		client.setFirstname("Nico");
-		client.setLastName("Nicolas");
+		client.setLastname("Nicolas");
 		client.setDoc(34574565L);
 		client.setDocType(docType);
 		client.setGender(true);
