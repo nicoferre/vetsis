@@ -18,6 +18,7 @@ public class RoleEntity {
 	@Column(name = "name", nullable=false)
 	private String name;
 
+	//ADMIN, CLIENT
 	public String getName() {
 		return name;
 	}

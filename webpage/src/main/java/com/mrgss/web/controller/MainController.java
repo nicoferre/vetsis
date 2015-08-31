@@ -34,7 +34,8 @@ public class MainController {
 		try{
 		RoleEntity role;
 		role = new RoleEntity();
-		role.setName("Administrador");
+		role.setName("admin");
+//		role.setName("client");
 		role = repositoryRole.save(role);
 
 		System.out.println(role.toString());

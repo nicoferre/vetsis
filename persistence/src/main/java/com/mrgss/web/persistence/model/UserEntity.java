@@ -26,7 +26,16 @@ public class UserEntity {
 	private RoleEntity role;
 	
 	private Boolean active;
-
+	
+	
+	public Boolean isAdmin() {
+		return this.role.getName().equalsIgnoreCase("admin");
+	}
+	
+	public Boolean isClient(){
+		return this.role.getName().equalsIgnoreCase("client");
+	}
+	
 	public String getUsername() {
 		return username;
 	}

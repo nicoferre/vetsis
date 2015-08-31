@@ -1,5 +1,7 @@
 package com.mrgss.web.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.mrgss.web.persistence.model.ClientEntity;
 import com.mrgss.web.persistence.model.DocTypeEntity;
+import com.mrgss.web.persistence.model.UserEntity;
 import com.mrgss.web.persistence.repository.DocTypeRepository;
 import com.mrgss.web.services.ClientService;
 
@@ -37,20 +40,24 @@ public class ClientController {
 			@RequestParam("mail") String mail,
 			@RequestParam("phone") Long phone,
 			@RequestParam("genderView") String genderView,
-			ModelAndView model) {
+			ModelAndView model, HttpSession session) {
 		
-		DocTypeEntity docType = newDocType();
-		Boolean gender = true;
-		if(genderView.equalsIgnoreCase("0")){
-			gender = false;
+		UserEntity user = (UserEntity) session.getAttribute("user");
+		
+		if(!user.getRole().getName().equalsIgnoreCase("client")){
+			DocTypeEntity docType = newDocType();
+			Boolean gender = true;
+			if(genderView.equalsIgnoreCase("0")){
+				gender = false;
+			}
+			ClientEntity client = clientService.newClient(docType, doc, firstname, lastname, mail, phone, gender);
+			model.addObject("client", client);
+			model.setViewName("success");	
+		} else{
+			model.setViewName("error");
 		}
 		
-		ClientEntity client = clientService.newClient(docType, doc, firstname, lastname, mail, phone, gender);
 		
-		System.out.println(client.toString());
-
-		model.addObject("client", client);
-		model.setViewName("success");
 		return model;
 	}
 

@@ -22,13 +22,11 @@ public class LoginController {
 	public ModelAndView login(@RequestParam("userName") String username, @RequestParam("password") String password, ModelAndView model) {
 		try{
 			UserEntity user = userService.login(username, password);
-			System.out.println("ID del user --> " + user.getId());
 			
 			model.addObject("user", user);
 			model.setViewName("home");
 			
 		} catch (Exception e){
-			System.out.println(e.getMessage());
 			model.setViewName("error");
 		}
 		return model;
