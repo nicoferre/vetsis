@@ -1,5 +1,7 @@
 package com.mrgss.web.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,7 @@ public class ClientController {
 
 	@Autowired
 	private ClientService clientService;
-	
+
 	@Autowired
 	DocTypeRepository repositoryDocType;
 
@@ -32,32 +34,32 @@ public class ClientController {
 		model.setViewName("new-client");
 		return model;
 	}
-	
+
 	@RequestMapping(value = "/new-client", method = RequestMethod.POST)
 	public ModelAndView newClient(@RequestParam("doc") Long doc,
 			@RequestParam("firstname") String firstname,
 			@RequestParam("lastname") String lastname,
 			@RequestParam("mail") String mail,
 			@RequestParam("phone") Long phone,
-			@RequestParam("genderView") String genderView,
-			ModelAndView model, HttpSession session) {
-		
+			@RequestParam("genderView") String genderView, ModelAndView model,
+			HttpSession session) {
+
 		UserEntity user = (UserEntity) session.getAttribute("user");
-		
-		if(!user.getRole().getName().equalsIgnoreCase("client")){
+
+		if (!user.getRole().getName().equalsIgnoreCase("client")) {
 			DocTypeEntity docType = newDocType();
 			Boolean gender = true;
-			if(genderView.equalsIgnoreCase("0")){
+			if (genderView.equalsIgnoreCase("0")) {
 				gender = false;
 			}
-			ClientEntity client = clientService.newClient(docType, doc, firstname, lastname, mail, phone, gender);
+			ClientEntity client = clientService.newClient(docType, doc,
+					firstname, lastname, mail, phone, gender);
 			model.addObject("client", client);
-			model.setViewName("success");	
-		} else{
+			model.setViewName("success");
+		} else {
 			model.setViewName("error");
 		}
-		
-		
+
 		return model;
 	}
 
@@ -65,13 +67,16 @@ public class ClientController {
 		DocTypeEntity docType = new DocTypeEntity();
 		docType.setName("DNI");
 		docType = repositoryDocType.save(docType);
-		
+
 		return docType;
 	}
 
-	@RequestMapping(value = "/list-client", method = RequestMethod.POST)
-	public ModelAndView listClient(@RequestParam("userName") String username,
-			@RequestParam("password") String password, ModelAndView model) {
+	@RequestMapping(value = "/list-client", method = RequestMethod.GET)
+	public ModelAndView listClient(ModelAndView model) {
+
+		List<ClientEntity> listClient = clientService.listClient();
+		model.addObject("clients", listClient);
+		model.setViewName("list-client");
 		return model;
 	}
 

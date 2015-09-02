@@ -1,5 +1,7 @@
 package com.mrgss.web.services;
 
+import java.util.List;
+
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,4 +30,10 @@ public class ClientService {
 		client = repository.save(client);
 		return client;
 	}
+	
+	public List<ClientEntity> listClient(){
+		List<ClientEntity> listClient = repository.findAll();
+		return listClient;
+	}
+	
 }

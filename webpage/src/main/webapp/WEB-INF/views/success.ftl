@@ -6,3 +6,8 @@
 <p>${client.mail}</p>
 <p>${client.phone}</p>
 <p>${client.startDate}</p>
+
+
+<form name="inicio" method="POST" action="home">
+<input type="submit" value="Inicio">
+</form>
