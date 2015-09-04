@@ -1,0 +1,48 @@
+.search {
+    margin-top: 0.9em;
+}
+
+.search .input {
+	background: rgba(211, 44, 28, 0.09);
+	background-image: url("../img/search00.png");
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+	display: block;
+	transition: all 0.3s ease-in-out; /*Add vendor prefixes*/
+    border: none;
+    color: #fff;
+    cursor: pointer;
+/*    font: italic 14px/30px Arial, sans-serif;*/
+    height: 2.5em;
+    padding: 3px 40px 0 5px;
+    text-align: left;
+    text-indent: 8px;
+    width: 0;
+}
+
+.search .input:focus {
+	width: 15em; /*Adjust width when focussed*/
+	outline: none;
+	cursor: text;
+	background: rgba(255, 255, 255, 0.09);
+	background-image: url("../img/search00.png");
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+    border-radius: 1px;
+}
+
+/*Overrides to hide submit*/
+.search .submit {
+	display: block;
+    background: none;
+    border: none;
+    height: 0;
+    padding: 0;
+    text-indent: -9999px;
+    width: 0;
+}
+
+.colorPlaceHolder::-webkit-input-placeholder { color: #fff; }
+.colorPlaceHolder:-moz-placeholder { color: #fff;}
+.colorPlaceHolder::-moz-placeholder { color: #fff;}
+.colorPlaceHolder:-ms-input-placeholder { color: #fff;}
