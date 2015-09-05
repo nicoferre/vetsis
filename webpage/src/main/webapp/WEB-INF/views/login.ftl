@@ -33,8 +33,9 @@
 	</form>
 </div>
 
-<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+
 
 </body>
-
+<script src="resources/js/jquery.js"></script>
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>
 </html>
