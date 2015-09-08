@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>	
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="resources/css/fixes.css">
 	<link rel="stylesheet" href="resources/css/dropownVerticalMenuStyle.css">
 	<link rel="stylesheet" href="resources/css/dropdownStyle.css">
 	<link rel="stylesheet" href="resources/css/animate.min.css">
+	<link rel="stylesheet" href="resources/css/font-awesome.css">
 	<link rel="stylesheet" href="resources/css/buttonMenuStyle.css">
-	<link rel="stylesheet" href="resources/css/temaClaroStyle.css">
+	<link rel="stylesheet" href="resources/css/tema-style.css">
 	<link rel="stylesheet" href="resources/css/inputSearchDesignStyle3.css">
+	<link rel="stylesheet" href="resources/css/style.css">
+	<link rel="stylesheet" href="resources/css/waves.css" />
+	<link rel="stylesheet" href="resources/css/card.css" />
 	<title>Vet-SIS | Sistema Integral de Gesti&oacute;n</title>
 </head>
 <body>
@@ -30,23 +34,26 @@
                     <li><a href="#"><i class="fa fa-home"></i>Inicio</a></li>
                     <li><a href="#"><i class="fa fa-comment-o"></i>Consultas</a>
                         <ul class="submenu">
-                            <li> <a href="new-client-form">Nuevo cliente<a></br></br></li>
-                            <li> <a href="update-client-form">Modificar cliente<a></br></br></li>
-                            <li> <a href="list-client">Listado de clientes<a></br></br></li>
+                            <li> <a href="new-client-form">Nuevo cliente<a></li>
+                            <li> <a href="update-client-form">Modificar cliente<a></li>
+                            <li> <a href="list-client">Listado de clientes<a></li>
                         </ul>
                     </li>
+                    <li><a href="logout"><i class="fa fa-home"></i>Salir</a></li>
                 </ul>
             </nav>  
         </section>
     </div>
   </nav>
-<div class="page-shader"></div>
-<a href="logout">Cerrar</a>
-</body>
+<div class="page-shader"><#include "${vista}"></div>
+
 <script src="resources/js/jquery.js"></script>
 <script src="resources/js/dropownVerticalMenu.js"></script>
-<script src="resources/js/temaClaro.js"></script>
-
+<script src="resources/js/tema-style.js"></script>
+ <script src="resources/js/waves.min.js"></script>
+    <script type="text/javascript">
+            Waves.displayEffect();
+    </script>
 <script type="text/javascript">
         <!-- Animacion DropDown User-->
             function DropDown(el) {
@@ -101,5 +108,5 @@
         <!-- /DropDown Notificaciones -->
 
     </script>
-
+</body>
 <html>

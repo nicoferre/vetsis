@@ -31,7 +31,8 @@ public class ClientController {
 	@RequestMapping(value = "/new-client-form", method = RequestMethod.GET)
 	public ModelAndView newClientForm() {
 		ModelAndView model = new ModelAndView();
-		model.setViewName("new-client");
+		model.addObject("vista", "new-client.ftl");
+		model.setViewName("home");
 		return model;
 	}
 
@@ -55,9 +56,11 @@ public class ClientController {
 			ClientEntity client = clientService.newClient(docType, doc,
 					firstname, lastname, mail, phone, gender);
 			model.addObject("client", client);
-			model.setViewName("success");
+			model.addObject("vista", "success.ftl");
+			model.setViewName("home");
 		} else {
-			model.setViewName("error");
+			model.addObject("vista", "error.ftl");
+			model.setViewName("home");
 		}
 
 		return model;
@@ -76,7 +79,8 @@ public class ClientController {
 
 		List<ClientEntity> listClient = clientService.listClient();
 		model.addObject("clients", listClient);
-		model.setViewName("list-client");
+		model.addObject("vista", "list-client.ftl");
+		model.setViewName("home");
 		return model;
 	}
 
