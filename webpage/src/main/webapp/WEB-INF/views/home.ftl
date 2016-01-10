@@ -24,6 +24,8 @@
     <link type="text/css" rel="stylesheet" href="resources/css/jquery.news-ticker.css">
     <link type="text/css" rel="stylesheet" href="resources/css/tabdrop.css">
     <link type="text/css" rel="stylesheet" href="resources/css/tabdrop.less">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+	
 </head>
 <body>
 <div>
@@ -190,6 +192,8 @@
     <script src="resources/js/jquery.flot.spline.js"></script>
     <script src="resources/js/zabuto_calendar.min.js"></script>
     <script src="resources/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/i18n/defaults-*.min.js"></script>
     <!--LOADING SCRIPTS FOR CHARTS-->
     <script src="resources/js/highcharts.js"></script>
     <script src="resources/js/data.js"></script>
