@@ -29,7 +29,7 @@ public class LoginController {
 			model.addObject("user", user);
 			model.addObject("vista", "welcome.ftl");
 			model.setViewName("home");
-			
+
 		} catch (Exception e) {
 			model.addObject("vista", "welcome.ftl");
 			model.setViewName("home");
@@ -42,22 +42,30 @@ public class LoginController {
 		UserEntity user = (UserEntity) session.getAttribute("user");
 		if (user != null) {
 			model.addObject("user", user);
+			model.addObject("vista", "welcome.ftl");
 			model.setViewName("home");
 		} else {
 			model.setViewName("login");
 		}
 		return model;
 	}
-	
+
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public ModelAndView homeGet(HttpSession session, ModelAndView model) {
 		UserEntity user = (UserEntity) session.getAttribute("user");
 		if (user != null) {
 			model.addObject("user", user);
+			model.addObject("vista", "welcome.ftl");
 			model.setViewName("home");
 		} else {
 			model.setViewName("login");
 		}
+		return model;
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView loginGet(HttpSession session, ModelAndView model) {
+			model.setViewName("login");
 		return model;
 	}
 }
